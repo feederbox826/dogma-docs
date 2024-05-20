@@ -17,6 +17,7 @@ interface RemotePlugin {
 type RemoteIndex = RemotePlugin[]
 
 interface LocalRepository {
+    name: string // name of repository
     collection: LocalCollection
     scripts: LocalSidecar[]
 }
@@ -59,7 +60,7 @@ async function searchRepository() {
     }
     // sort plugins and print to md
     const sortedPlugins = plugins
-        .sort((a, b) => a.name.localeCompare(b.name))
+        .sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()))
     // print to file
     const outputPath = "./generated.md"
     const stream = fs.createWriteStream(outputPath)

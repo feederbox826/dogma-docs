@@ -1,11 +1,11 @@
 collection:
   index: https://stashapp.github.io/CommunityScripts/stable/index.yml
   global_repo: stashapp/CommunityScripts
-  base_path: main
+  base_path: main/plugins
 
 scripts:
   - id: example
-    path: plugins/PluginName
+    path: PluginName
     description: "New description"
     readme: https://github.com/ghost/PluginName/blob/main/README.md
     author: Deleted User
@@ -13,65 +13,52 @@ scripts:
       - https://avatars.githubusercontent.com/u/10137
 
   - id: CropperJS
-    path: plugins/CropperJS
     readme: https://github.com/fengyuanchen/cropperjs/blob/main/README.md
     author: "[fengyuanchen](https://github.com/fengyuanchen)"
     screenshots:
       - https://raw.githubusercontent.com/fengyuanchen/cropperjs/main/docs/images/data.jpg
+
   - id: date_parser
     path: plugins/DateParser
     author: HijackHornet
 
-  - id: comicInfoExtractor
-    path: plugins/comicInfoExtractor
-
   - id: defaultDataForPath
-    path: plugins/defaultDataForPath
     author: "[TheSinfulKing](https://github.com/TheSinfulKing)"
   
   - id: date_parser
     path: plugins/DateParser
 
   - id: dupeMarker
-    path: plugins/dupeMarker
     author: "[feederbox826](https://github.com/feederbox826)"
   
   - id: stats
-    path: plugins/stats
     readme: false
-    author: "[CJ](https://github.com/cj12312021)"
+    author: "[7dJx1qP](https://github.com/7dJx1qP)"
 
   - id: filenameParser
-    path: plugins/filenameParser
     readme: false
     author: "[gitgiggety](https://github.com/gitgiggety)"
   
   - id: miscTags
-    path: plugins/miscTags
     readme: false
     author: "[Tweeticoats](https://github.com/Tweeticoats)"
 
   - id: pathParser
-    path: plugins/pathParser
     author: "[ImJustMatt](https://github.com/ImJustMatt)"
 
   - id: phashDuplicateTagger
-    path: plugins/phashDuplicateTagger
     author: "[Darklyter](https://github.com/Darklyter), [stg-annon](https://github.com/stg-annon)"
 
   - id: renamerOnUpdate
-    path: plugins/renamerOnUpdate
     author: "[Belleyy](https://github.com/Belleyy)"
     screenshots:
       - /assets/plugins/renamerOnUpdate-1.png
 
   - id: sceneCoverCropper
-    path: plugins/sceneCoverCropper
     author: "[feederbox826](https://github.com/feederbox826)"
     readme: false
 
   - id: markerTagToScene
-    path: plugins/markerTagToScene
     author: "[WithoutPants](https://github.com/WithoutPants)"
     readme: false
 
@@ -81,11 +68,57 @@ scripts:
     readme: false
 
   - id: stashai
-    path: plugins/stashAI
     author: cc1234
     readme: false
 
   - id: stashBatchResultToggle
-    path: plugins/StashBatchResultToggle
     readme: false
-    author: "[CJ](https://github.com/cj12312021)"
+    author: "[7dJx1qP](https://github.com/7dJx1qP)"
+
+  - id: stashNotes
+    readme: false
+    author: "[QxxxGit](https://github.com/QxxxGit)"
+
+  - id: stash-realbooru
+    path: plugins/stashRealbooru
+    readme: false
+    author: cc1234
+
+  - id: StashUserscriptLibrary
+    path: plugins/stashUserscriptLibrary
+    readme: false
+    author: "[7dJx1qP](https://github.com/7dJx1qP)"
+
+  - id: stashdb-performer-gallery
+    readme: false
+    author: "[Tweeticoats](https://github.com/Tweeticoats)"
+
+  - id: tag_graph
+    path: plugins/tagGraph
+    author: "[stg-annon](https://github.com/stg-annon)"
+  
+  - id: TPDBMarkers
+    author: "[Tweeticoats](https://github.com/Tweeticoats)"
+  
+  - id: themeSwitch
+    author: "[elkorol](https://github.com/elkorol)"
+    screenshots:
+      - /assets/plugins/theme-switch-1.png
+      - /assets/plugins/theme-switch-2.png
+
+  - id: timestampTrade
+    author: "[Tweeticoats](https://github.com/Tweeticoats)"
+
+  - id: titleFromFilename
+    author: "[bnkai](https://github.com/bnkai)"
+  
+  - id: VideoScrollWheel
+    readme: false
+    author: "[WeedLordVegeta420](https://github.com/WeedLordVegeta420)"
+  
+  - id: visage
+    readme: false
+    author: cc1234
+
+  - id: qxSceneCard
+    author: "[Qx](https://github.com/QxxxGit)"
