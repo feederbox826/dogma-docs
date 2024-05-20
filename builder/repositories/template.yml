@@ -1,0 +1,15 @@
+collection:
+  index: https://stashapp.github.io/CommunityScripts/stable/index.yml
+  global_author: F.D.C Willard
+  global_repo: stashapp/CommunityScripts
+  base_path: main/plugins
+
+scripts:
+  - id: visage
+    path: visage
+    description: Use facial Recognition To Lookup Performers.
+    readme: visage/README.md
+    author: cc1234
+    screenshots:
+      - https://example.com/visage/1.jpg
+      - https://example.com/visage/2.jpg

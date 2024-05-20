@@ -1,0 +1,98 @@
+site_name: Docs POC
+site_url: https://example.com/docs
+site_description: >-
+  Lorem Ipsum
+
+repo_name: FansDB/docs
+repo_url: https://github.com/FansDB/docs
+edit_uri: edit/main/docs/
+
+copyright: Copyright 2024
+
+theme:
+  name: material
+  custom_dir: overrides
+  features:
+    - content.action.edit
+    - content.action.view
+    - search.highlight
+    - search.share
+    - navigation.instant
+    - navigation.instant.progress
+#    - content.code.copy
+#    - content.code.annotate 
+#    - navigation.tracking
+    - navigation.tabs
+#    - navigation.tabs.sticky
+    - navigation.sections
+    - toc.follow
+    - navigation.top
+#    - navigation.footer
+    - navigation.indexes
+    - content.tooltips
+    - content.tabs.link
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      #primary: indigo
+      #accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      #primary: red
+      #accent: red
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  favicon: assets/images/favicon.png
+
+plugins:
+  - search
+  - git-revision-date-localized:
+      enable_creation_date: true
+  - git-committers:
+      repository: feederbox826/dogma-docs
+      branch: main
+      enabled: !ENV [CI, false]
+  - glightbox
+  - social:
+      enabled: !ENV [CI, false]
+
+watch:
+  - includes
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - abbr
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - footnotes
+  - tables
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
+  - toc:
+      permalink: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+nav:
+  - Home: index.md
+
+extra_css:
+  - stylesheets/extra.css
