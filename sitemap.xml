@@ -6,11 +6,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://example.com/docs/dogma/</loc>
-         <lastmod>2024-05-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://example.com/docs/generated/</loc>
          <lastmod>2024-05-20</lastmod>
          <changefreq>daily</changefreq>
