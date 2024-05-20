@@ -27,6 +27,7 @@ interface LocalCollection {
     global_repo: string // repository of collection
     global_author?: string // author of collection if it is just owner
     base_path?: string // base path to plugins
+    exclusive: boolean // exclude any entires not in sidecar
 }
 
 interface LocalSidecar {
@@ -84,6 +85,7 @@ async function parseRepository(localRepository: LocalRepository): Promise<Plugin
     const indexPlugins: Plugin[] = []
     for (const index of indexData) {
         const sidecarMatch = repoSidecars.find(sidecar => sidecar.id === index.name)
+        if (repoDefaults.exclusive && !sidecarMatch) continue // if exclusive, skip if no sidecar
         const plugin = new Plugin(repoDefaults, sidecarMatch, index)
         indexPlugins.push(plugin)
     }
