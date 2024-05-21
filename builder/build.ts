@@ -84,7 +84,7 @@ async function parseRepository(localRepository: LocalRepository): Promise<Plugin
     // iterate over remote index and match with sidecars
     const indexPlugins: Plugin[] = []
     for (const index of indexData) {
-        const sidecarMatch = repoSidecars.find(sidecar => sidecar.id === index.name)
+        const sidecarMatch = repoSidecars.find(sidecar => sidecar.id == index.id)
         if (repoDefaults.exclusive && !sidecarMatch) continue // if exclusive, skip if no sidecar
         const plugin = new Plugin(repoDefaults, sidecarMatch, index)
         indexPlugins.push(plugin)
