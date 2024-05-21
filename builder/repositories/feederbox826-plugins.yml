@@ -22,7 +22,7 @@ scripts:
 
   - id: studio-img-bg
     screenshots:
-      - "https://github.com/feederbox826/plugins/blob/main/docs/studio-image-bg_after.png"
+      - "https://raw.githubusercontent.com/feederbox826/plugins/main/docs/studio-image-bg_after.png"
   
   - id: tag-video
     readme: false
