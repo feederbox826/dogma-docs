@@ -122,3 +122,6 @@ scripts:
 
   - id: qxSceneCard
     author: "[Qx](https://github.com/QxxxGit)"
+
+  - id: discordPresence
+    author: NotForMyCV
