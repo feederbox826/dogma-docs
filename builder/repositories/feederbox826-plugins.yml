@@ -1,7 +1,7 @@
 collection:
   index: https://feederbox826.github.io/plugins/main/index.yml
   global_repo: feederbox826/plugins
-  global_author: [feederbox826](https://feederbox.cc)
+  global_author: "[feederbox826](https://feederbox.cc)"
   base_path: main/plugins
 
 scripts:
