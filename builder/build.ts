@@ -163,7 +163,7 @@ class Plugin {
 
 === "Author"
 
-    ${this.author.replace(/,/g, "{target=_blank},") + "{target=_blank}"}
+    ${this.author.replace(/(\[.+\]\(http.+\)(?:,|\r|\n|\r\n))/g, "{target=_blank}")}
 
 === "Screenshots"
     ${screenshots}`
