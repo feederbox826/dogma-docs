@@ -1,0 +1,34 @@
+collection:
+  index: https://feederbox826.github.io/plugins/main/index.yml
+  global_repo: feederbox826/plugins
+  global_author: [feederbox826](https://feederbox.cc)
+  base_path: main/plugins
+
+scripts:
+  - id: 0gql-intercept
+    readme: false
+  
+  - id: deletefp
+    readme: false
+  
+  - id: forbiddenConfig
+    readme: false
+
+  - id: markergen
+    readme: false
+
+  - id: rebrand
+    readme: false
+
+  - id: studio-img-bg
+    screenshots:
+      - "https://github.com/feederbox826/plugins/blob/main/docs/studio-image-bg_after.png"
+  
+  - id: tag-video
+    readme: false
+  
+  - id: watched-videp
+    readme: false
+  
+  - id: wfke
+    readme: false
