@@ -6,6 +6,6 @@ hide:
 
 # Home
 
-[dogma docs](/dogma)
+[dogma docs](./dogma/)
 
-[generated docs](/generated)
+[generated docs](./generated/)

@@ -142,14 +142,14 @@ class Plugin {
                 : "No README"
         const screenshots = this.screenshots
             .map(screenshot => `![${this.name} screenshot](${screenshot})  `)
-            .join("\n")
+            .join("")
         // ugly formatted markdown
         return `
 ### [${this.name}](${folderPath}){target=_blank}
 
 === "Description"
 
-    ${this.description}
+    ${this.description.replace("<", "&lt;").replace(">", "&gt;")}
 
 === "Source URL"
 
