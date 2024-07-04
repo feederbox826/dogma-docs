@@ -12,21 +12,12 @@ scripts:
     screenshots:
       - https://avatars.githubusercontent.com/u/10137
 
-  - id: CropperJS
-    readme: https://github.com/fengyuanchen/cropperjs/blob/main/README.md
-    author: "[fengyuanchen](https://github.com/fengyuanchen)"
-    screenshots:
-      - https://raw.githubusercontent.com/fengyuanchen/cropperjs/main/docs/images/data.jpg
-
   - id: date_parser
     path: plugins/DateParser
     author: HijackHornet
 
   - id: defaultDataForPath
     author: "[TheSinfulKing](https://github.com/TheSinfulKing)"
-  
-  - id: date_parser
-    path: plugins/DateParser
 
   - id: dupeMarker
     author: "[feederbox826](https://github.com/feederbox826)"

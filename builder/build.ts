@@ -40,8 +40,8 @@ interface LocalSidecar {
 }
 
 // iterate over folder
-async function searchRepository() {
-    const repoPath = path.resolve('./repositories')
+async function searchRepository(pathName: string = "plugins"): Promise<Plugin[]> {
+    const repoPath = path.resolve(`./repositories/${pathName}`)
     const repoFiles = fs.readdirSync(repoPath)
 
     const repositories: LocalRepository[] = []
@@ -62,10 +62,14 @@ async function searchRepository() {
     // sort plugins and print to md
     const sortedPlugins = plugins
         .sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()))
+    return sortedPlugins
+}
+
+function printPlugins(outputName: string, sortedPlugins: Plugin[]) {
     // print to file
-    const outputPath = "./generated.md"
+    const outputPath = `./${outputName}.md`
     const stream = fs.createWriteStream(outputPath)
-    stream.write("# Plugins list\n\n")
+    stream.write(`# ${outputName} list\n\n`)
     // iterate over plugins
     for (const plugin of sortedPlugins) {
         stream.write(plugin.printMD())
@@ -92,7 +96,14 @@ async function parseRepository(localRepository: LocalRepository): Promise<Plugin
     return indexPlugins
 }
 
-searchRepository()
+function sanitizeMD(md: string) {
+    return md.replace("<", "&lt;").replace(">", "&gt;")
+}
+
+searchRepository("plugins")
+    .then(plugins => printPlugins("Plugins", plugins))
+searchRepository("themes")
+    .then(themes => printPlugins("Themes", themes))
 
 class Plugin {
     id: string // internal id of plugin
@@ -149,7 +160,7 @@ class Plugin {
 
 === "Description"
 
-    ${this.description.replace("<", "&lt;").replace(">", "&gt;")}
+    ${sanitizeMD(this.description)}
 
 === "Source URL"
 
