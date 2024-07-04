@@ -5,5 +5,11 @@
 		"ts-node": "^10.9.2",
 		"typescript": "^5.4.5",
 		"yaml": "^2.4.2"
+	},
+	"scripts": {
+		"serve": "mkdocs serve",
+		"generate": "cd builder && ts-node build.ts",
+		"copy": "copy builder\\dist\\* docs\\",
+		"update": "npm run generate && npm run copy"
 	}
 }

@@ -3,4 +3,4 @@ site
 .cache
 node_modules/
 docs/
-builder/*.md
+builder/dist/*

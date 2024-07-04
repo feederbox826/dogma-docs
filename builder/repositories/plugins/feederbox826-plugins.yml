@@ -1,3 +1,4 @@
+name: feederbox826 plugins
 collection:
   index: https://feederbox826.github.io/plugins/main/index.yml
   global_repo: feederbox826/plugins

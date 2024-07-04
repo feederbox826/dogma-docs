@@ -25,7 +25,7 @@ jobs:
           npm i -g ts-node
           cd builder
           ts-node build.ts
-          cp generated.md ../docs/generated.md
+          cp dist/* ../docs/
       - run: pip install \ 
                mkdocs-material \
                mkdocs-rss-plugin \
