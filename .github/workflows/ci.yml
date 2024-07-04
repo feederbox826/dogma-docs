@@ -24,6 +24,7 @@ jobs:
           npm i
           npm i -g ts-node
           cd builder
+          mkdir dist
           ts-node build.ts
           cp dist/* ../docs/
       - run: pip install \ 
